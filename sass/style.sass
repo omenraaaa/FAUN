@@ -1,0 +1,388 @@
+@import reset
+
+$main: 'BebasNeue'
+$paragraph: 'Raleway'
+$black: #222
+$red: #ed1f34
+$white: #fff
+$grey: #535353
+
+@mixin b-radius($radius) 
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius
+  border-radius: $radius
+@mixin opacity($opacity)
+  -moz-opacity: $opacity
+  -khtml-opacity: $opacity
+  opacity: $opacity
+
+/* Helpers */
+
+.flex-box 
+  display: flex
+.container
+  width: 1100px
+  margin: 0 auto
+.flex-v-align
+  align-items: center
+.flex-h-align
+  justify-content: center
+.hidden
+  display: none
+.overflow
+  overflow: hidden
+
+/* Main styles */
+
+body
+  background-color: $black
+  min-width: 1200px
+h1, h2, h3, h4, h5, button, span
+  font-family: $paragraph
+p
+  font-family: $paragraph
+  line-height: 1.5
+.outline-btn_light,
+.outline-btn_dark
+  background-color: transparent
+  cursor: pointer
+  transition: border-radius 0.5s, opacity 1s
+  @include opacity(90%)
+  &:hover
+    @include b-radius(10px)
+    @include opacity(100%)
+.outline-btn_light
+  border: 2px solid $white
+  color: $white
+.outline-btn_dark
+  border: 2px solid $grey
+  color: $grey
+
+#top 
+  background-image: url(../img/bg_top.png)
+  background-size: cover
+  background-repeat: no-repeat
+  background-color: $black
+  padding: 370px 0 222px 0
+  position: relative
+  font-family: $paragraph
+.navbar__logo
+  font-size: 38px
+  font-weight: bold
+.navbar
+  position: absolute
+  top: 0
+  justify-content: space-between
+  align-items: center
+  width: inherit
+  color: $white
+  padding: 71px 0
+  .navbar__menu-icons
+    cursor: pointer
+    transition: transform 0.5s
+  .navbar__search:hover
+    transform: scale(1.3)
+  .navbar__menu-toggler
+    width: 33px
+    text-align: center
+    hr
+      position: relative
+      left: 0
+      width: inherit
+      font-size: 20px
+      transition: left 0.5s, width 0.5s
+  .navbar__menu-toggler:hover
+    hr
+      &:first-child
+        left: -5px
+      &:nth-child(2)
+        left: 7px
+      &:last-child
+        width: 27px
+.mobile-nav
+  background-color: $black
+  position: absolute
+  width: 100%
+  height: 100vh
+  top: 0
+  z-index: 200
+  align-items: center
+  justify-content: center
+  @include opacity(0)
+  transition: opacity 2s
+  .close-icon
+    color: $white
+    cursor: pointer
+    position: absolute
+    top: 30px
+    right: 30px
+    &:hover
+      @include opacity(100%)
+  ul
+    width: 500px
+    position: relative
+    top: 300px
+    @include opacity(10%)
+    transition: top 1s, opacity 0.5s
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 25px
+      position: relative
+      transition: left 1s
+      &:nth-child(even)
+        left: 300px
+      &:nth-child(odd)
+        left: -300px
+      a
+        color: $white
+        text-decoration: none
+        @include opacity(80%)
+        &:hover
+          @include opacity(100%)
+.mobile-nav__show
+  @include opacity(100%)
+  ul
+    top: 0
+    @include opacity(100%)
+    li:nth-child(even)
+      left: 0
+    li:nth-child(odd)
+      left: 0
+
+
+.card__frame
+  overflow: hidden
+  height: 583px
+.card__tape
+  position: relative
+  top: 0
+  transition: top 1s
+.card
+  margin-top: 80px
+  h2, h3
+    color: $white
+    font-size: 73px
+  h1, h3
+    font-weight: bold
+  h1
+    color: $red
+    font-size: 130px
+.card__btn
+  padding: 22px 69px
+  font-size: 16px
+  margin-top: 160px
+.card-counter
+    color: $grey
+    margin-right: 64px
+.card-counter__frame
+  position: relative
+  top: 196px
+.current
+  height: 244px
+  border-bottom: 1px solid $grey
+  &:first-child
+    width: 160px
+  &:last-child
+    width: 180px
+.card-counter__numbers
+  display: grid
+  grid-template-column: 100%
+  grid-gap: 7px
+  position: relative
+  transition: top 1s
+  .card-counter__number 
+    margin: 34px 38px
+    font-size: 24px
+    font-family: $paragraph
+    font-weight: bold
+    cursor: pointer
+    @include opacity(40%)
+    transition: opacity 0.5s
+    &:hover
+      @include opacity(100%)
+  .card-counter__number_active
+    color: $white
+    @include opacity(100%)
+
+#about
+  background-color: $white
+  padding: 175px 0
+  position: relative
+  z-index: -2
+  overflow: hidden
+.about__wrapper
+  justify-content: space-between
+.about__caption
+  width: 35%
+  p
+    font-size: 18px
+    margin-top: 82px
+  h3
+    font-size: 37px
+    font-weight: bold
+.about__caption__btn
+  margin-top: 73px
+  padding: 15px 30px
+  font-size: 16px
+.about__img__wrapper
+  width: 50%
+  img
+    width: 100%
+.concert
+  color: $red
+  position: relative
+  font-size: 80px
+  top: -9.5%
+  left: 38.3%
+  font-weight: bold
+.about__back
+  font-size: 250px
+  color: $grey
+  @include opacity(5%)
+  font-weight: bold
+  position: absolute
+  z-index: -1
+  top: 85px
+  &:first-child
+    left: -400px
+  &:nth-child(2)
+    left: 1000px
+
+.gallery__wrapper 
+  width: 100%
+  overflow: hidden
+.gallery__tape
+  display: grid
+  grid-template-columns: repeat(4, 25%)
+.last-video__items__wrapper
+  height: 890px
+  position: relative
+  overflow: hidden
+video#last-video
+  height: inherit
+#progress
+  width: 100%
+  height: 5px
+  background-color: $black
+  position: absolute
+  bottom: 0
+  .progress__inner
+    width: 0
+    height: inherit
+    background-color: $red
+@keyframes play_hover
+  from
+    transform: scale(1)
+  50%
+    transform: scale(1.1)
+  to
+    transform: scale(1)
+sphere
+  margin: auto
+  position: absolute
+  top: 0 
+  left: 0 
+  bottom: 0 
+  right: 0
+  @include b-radius(100%)
+.play-btn__container
+  width: 184px
+  height: 184px
+  cursor: pointer
+  position: relative
+  @include opacity(95%)
+  transition: opacity 1s
+  &:hover
+    @include opacity(100%)
+    animation-duration: 1s
+    animation-name: play_hover
+    animation-iteration-count: infinite
+  .sphere_lighter
+    @extend sphere
+    width: 100%
+    height: 100%
+    background-color: #000
+    @include opacity(30%)
+  .sphere_light
+    @extend sphere
+    width: 80%
+    height: 80%
+    background-color: #000
+    @include opacity(40%)
+  .sphere_dark
+    @extend sphere
+    width: 60%
+    height: 60%
+    background-color: #000
+    @include opacity(50%)
+  .sphere__main
+    @extend sphere
+    width: 34%
+    height: 34%
+    border: 5px solid $white
+    justify-content: center
+    align-items: center
+    .play__icon
+      display: block
+      width: 37%
+      height: 37%
+      background-image: url(../img/logo/play_arrow.png)
+      background-size: cover
+.last-video__items
+  width: 1465px
+  height: 315px
+  max-width: 85%
+  position: absolute
+  margin: auto
+  top: 0 
+  left: 0 
+  bottom: 0 
+  right: 0
+  justify-content: space-between
+  align-items: center
+  z-index: 200
+  .last-video__caption
+    flex-basis: 640px
+    h1
+      color: $red
+      font-size: 55px
+      font-weight: bold
+      @include opacity(70%)
+    p
+      color: $white
+      font-size: 18px
+      margin-top: 53px
+#contact-us
+  padding: 237px 0 277px 0
+  background: no-repeat url(../img/bottom_img.png)
+  background-size: cover
+  background-color: $black
+.contact-us__caption
+  color: $white
+  text-align: center
+  width: 635px
+  margin: 0 auto
+  h1
+    font-size: 37px
+    font-weight: bold
+  p
+    font-size: 14px
+    margin-top: 65px
+  button
+    margin-top: 70px
+    padding: 25px 40px
+    font-size: 16px
+
+footer
+  padding: 111px 0 130px 0
+  background-color: $black
+  color: $white
+  text-align: center
+  span
+    display: block
+  .copyright
+    font-size: 14px
+    margin-top: 23px

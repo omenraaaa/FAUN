@@ -1,0 +1,240 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>FAUN</title>
+	<meta charset="utf-8">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=1200">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section id="top">
+		<div class="container">
+			<nav class="navbar flex-box">
+				<span class="navbar__menu-icons navbar__menu-toggler" id="menu_toggler">
+					<hr/>
+					<hr/>
+					<hr/>
+				</span>
+				<span class="navbar__logo">FAUN</span>
+				<span class="fa fa-2x fa-search navbar__menu-icons navbar__search"></span>
+			</nav>
+		</div>
+		<div class="mobile-nav flex-box hidden">
+			<span class="close-icon fa fa-2x fa-window-close" id="close_icon"></span>
+			<ul>
+				<li><a href="">Link 01</a></li>
+				<li><a href="">Link 02</a></li>
+				<li><a href="">Link 03</a></li>
+				<li><a href="">Link 04</a></li>		
+			</ul>
+		</div>
+		<div class="flex-box">	
+			<div class="card-counter flex-box">
+				<div class="current"></div>
+				<div class="card-counter__frame">	
+					<div class="card-counter__numbers" data-state="0">
+						<span class="card-counter__number">1</span>
+						<span class="card-counter__number">2</span>
+						<span class="card-counter__number">3</span>
+						<span class="card-counter__number">4</span>
+					</div>
+				</div>	
+				<div class="current"></div>
+			</div>
+			<div class="card__frame">	
+				<div class="card__tape" data-state>	
+					<div class="card">
+						<h2>A SAFE KIND</h2>
+						<h1>MUSIC IS</h1>
+						<h3>OF HIGH</h3>
+						<button type="button" class="outline-btn_light card__btn">VIEW 	MORE</button>
+					</div>
+					<div class="card">
+						<h2>A SAFE KIND</h2>
+						<h1>LIFE IS</h1>
+						<h3>OF HIGH</h3>
+						<button type="button" class="outline-btn_light card__btn">VIEW 	MORE</button>
+					</div>
+					<div class="card">
+						<h2>A SAFE KIND</h2>
+						<h1>SEX IS</h1>
+						<h3>OF HIGH</h3>
+						<button type="button" class="outline-btn_light card__btn">VIEW 	MORE</button>
+					</div>
+					<div class="card">
+						<h2>A SAFE KIND</h2>
+						<h1>MOUNTS IS</h1>
+						<h3>OF HIGH</h3>
+						<button type="button" class="outline-btn_light card__btn">VIEW 	MORE</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<span class="about__back">ABOUT US</span>
+		<span class="about__back">ABOUT US</span>
+		<div class="container">
+			<div class="flex-box about__wrapper">
+				<div class="about__caption">
+					<h3>ABOUT US</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<button type="button" class="outline-btn_dark about__caption__btn">CHECK OUR TOUR</button>
+				</div>
+				<div class="about__img__wrapper">
+					<img src="img/about_img.png" alt="...">
+					<span class="concert">CONCERT</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="gallery">
+		<div class="last-video__items__wrapper flex-box flex-h-align">
+			<div class="last-video__items flex-box">	
+				<div class="play-btn__container" id="play_button">
+					<div class="sphere_lighter"></div>
+					<div class="sphere_light"></div>
+					<div class="sphere_dark"></div>
+					<div class="sphere__main flex-box">
+						<span class="play__icon"></span>
+					</div>
+				</div>
+				<div class="last-video__caption">
+					<h1>OUR NEWEST VIDEO</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="card-counter__frame">	
+					<div class="card-counter__numbers" data-state="2">
+						<span class="card-counter__number">1</span>
+						<span class="card-counter__number">2</span>
+						<span class="card-counter__number">3</span>
+						<span class="card-counter__number">4</span>
+					</div>
+				</div>
+			</div>
+			<video src="video/AMENRA - RAZOREATER(acoustic).mp4" type="video/mp4" id="last_video" height="890" poster="img/player_example.png" muted autoplay></video>
+			<div id="progress">
+				<div class="progress__inner"></div>
+			</div>
+		</div>
+		<div class="gallery__wrapper">
+			<div class="gallery__tape">	
+				<img src="img/gallery_photo_01.png" alt="...">
+				<img src="img/gallery_photo_02.png" alt="...">
+				<img src="img/gallery_photo_03.png" alt="...">
+				<img src="img/gallery_photo_04.png" alt="...">
+			</div>
+		</div>
+	</section>
+	<section id="contact-us">
+		<div class="contact-us__caption">	
+			<h1>WANT TO HIRE US</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<button type="button" class="outline-btn_light">CONTACT WITH US</button>
+		</div>
+	</section>
+	<footer>
+		<h5 class="navbar__logo">FAUN</h5>
+		<p class="copyright">ALL RIGHTS RESERVED BY FAUN TEMPLATE FOR ROCK BANDS</p>
+	</footer>
+
+	<script type="text/javascript">
+
+		var num_wrapper = document.querySelectorAll('.card-counter__numbers')
+		var card_tape = document.querySelectorAll('.card__tape')
+		var num_item = document.querySelectorAll('.card-counter__number')
+
+		function moveCards() {
+			
+			for(var i = 0; i < num_wrapper.length; i++) {
+			
+				num_wrapper[i].style.top = '-' + num_wrapper[i].dataset.state * 98 + 'px'
+				num_wrapper[i].children[num_wrapper[i].dataset.state].classList.add('card-counter__number_active')
+			}
+			
+			for(var i = 0; i < num_wrapper.length; i++) {
+			
+				card_tape[0].dataset.state = num_wrapper[0].dataset.state
+				setTimeout(function(){
+					card_tape[0].style.top = '-' + 583 * card_tape[0].dataset.state + 'px'
+				}, 10)
+			}
+		}
+
+		moveCards()
+
+		document.addEventListener('click', function(e){
+			
+			var numbers = e.target.parentNode.children
+
+			if(e.target.classList.contains('card-counter__number')) {
+				
+				for (var i = 0; i < numbers.length; i++) {
+					
+					if(numbers[i].classList.contains('card-counter__number_active')) {
+						
+						numbers[i].classList.remove('card-counter__number_active')
+					}
+				}
+				
+				setTimeout(function(){
+					
+					e.target.classList.add('card-counter__number_active')
+						
+					e.target.parentNode.dataset.state = e.target.innerHTML - 1
+					card_tape[0].
+					
+					setTimeout(moveCards(), 10)
+				
+				}, 10)
+			} else {
+				return
+			}
+		})
+
+		var video = document.getElementById('last_video')
+		var progress = document.querySelectorAll('.progress__inner')
+		var play = document.getElementById('play_button')
+
+		video.addEventListener('timeupdate', function(){
+			progress[0].style.width = video.currentTime / (video.duration / 100) + '%'
+		})
+		
+		play.addEventListener('click', function(){
+			
+			if(video.paused) {
+				video.play()
+			} else {
+				video.pause()
+			}
+		})
+
+		var mobile_nav = document.querySelectorAll('.mobile-nav')
+		var body = document.querySelectorAll('body')
+
+		document.addEventListener('click', function(e){
+
+			if (e.target.id == 'menu_toggler') {
+				
+				mobile_nav[0].classList.toggle('hidden')
+				setTimeout(function() {
+					mobile_nav[0].classList.toggle('mobile-nav__show')
+				}, 10)
+			} else if (e.target.id == 'close_icon') {
+				
+				mobile_nav[0].classList.toggle('mobile-nav__show')
+				setTimeout(function() {
+					mobile_nav[0].classList.toggle('hidden')
+				}, 1000)
+			} else {
+				
+				return
+			}
+
+		})
+
+	</script>
+</body>
+</html>
