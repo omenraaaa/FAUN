@@ -47,10 +47,10 @@ p
 .outline-btn_dark
   background-color: transparent
   cursor: pointer
-  transition: border-radius 0.5s, opacity 1s
+  transition: border-radius 0.5s, opacity 0.5s
   @include opacity(90%)
   &:hover
-    @include b-radius(10px)
+    @include b-radius(5px)
     @include opacity(100%)
 .outline-btn_light
   border: 2px solid $white
@@ -175,8 +175,8 @@ p
   font-size: 16px
   margin-top: 160px
 .card-counter
-    color: $grey
-    margin-right: 64px
+  color: $grey
+  margin-right: 64px
 .card-counter__frame
   position: relative
   top: 196px
@@ -211,7 +211,6 @@ p
   background-color: $white
   padding: 175px 0
   position: relative
-  z-index: -2
   overflow: hidden
 .about__wrapper
   justify-content: space-between
@@ -244,7 +243,7 @@ p
   @include opacity(5%)
   font-weight: bold
   position: absolute
-  z-index: -1
+  z-index: 10
   top: 85px
   &:first-child
     left: -400px

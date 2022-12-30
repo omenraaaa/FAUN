@@ -90,17 +90,17 @@ p {
 .outline-btn_dark {
   background-color: transparent;
   cursor: pointer;
-  transition: border-radius 0.5s, opacity 1s;
+  transition: border-radius 0.5s, opacity 0.5s;
   -moz-opacity: 90%;
   -khtml-opacity: 90%;
   opacity: 90%;
 }
 .outline-btn_light:hover,
 .outline-btn_dark:hover {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  border-radius: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
   -moz-opacity: 100%;
   -khtml-opacity: 100%;
   opacity: 100%;
@@ -335,7 +335,6 @@ p {
   background-color: #fff;
   padding: 175px 0;
   position: relative;
-  z-index: -2;
   overflow: hidden;
 }
 
@@ -385,7 +384,7 @@ p {
   opacity: 5%;
   font-weight: bold;
   position: absolute;
-  z-index: -1;
+  z-index: 10;
   top: 85px;
 }
 .about__back:first-child {

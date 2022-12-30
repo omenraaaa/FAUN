@@ -81,7 +81,7 @@
 				<div class="about__caption">
 					<h3>ABOUT US</h3>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<button type="button" class="outline-btn_dark about__caption__btn">CHECK OUR TOUR</button>
+					<button type="button" class="about__caption__btn outline-btn_dark">CHECK OUR TOUR</button>
 				</div>
 				<div class="about__img__wrapper">
 					<img src="img/about_img.png" alt="...">
@@ -140,101 +140,6 @@
 		<p class="copyright">ALL RIGHTS RESERVED BY FAUN TEMPLATE FOR ROCK BANDS</p>
 	</footer>
 
-	<script type="text/javascript">
-
-		var num_wrapper = document.querySelectorAll('.card-counter__numbers')
-		var card_tape = document.querySelectorAll('.card__tape')
-		var num_item = document.querySelectorAll('.card-counter__number')
-
-		function moveCards() {
-			
-			for(var i = 0; i < num_wrapper.length; i++) {
-			
-				num_wrapper[i].style.top = '-' + num_wrapper[i].dataset.state * 98 + 'px'
-				num_wrapper[i].children[num_wrapper[i].dataset.state].classList.add('card-counter__number_active')
-			}
-			
-			for(var i = 0; i < num_wrapper.length; i++) {
-			
-				card_tape[0].dataset.state = num_wrapper[0].dataset.state
-				setTimeout(function(){
-					card_tape[0].style.top = '-' + 583 * card_tape[0].dataset.state + 'px'
-				}, 10)
-			}
-		}
-
-		moveCards()
-
-		document.addEventListener('click', function(e){
-			
-			var numbers = e.target.parentNode.children
-
-			if(e.target.classList.contains('card-counter__number')) {
-				
-				for (var i = 0; i < numbers.length; i++) {
-					
-					if(numbers[i].classList.contains('card-counter__number_active')) {
-						
-						numbers[i].classList.remove('card-counter__number_active')
-					}
-				}
-				
-				setTimeout(function(){
-					
-					e.target.classList.add('card-counter__number_active')
-						
-					e.target.parentNode.dataset.state = e.target.innerHTML - 1
-					card_tape[0].
-					
-					setTimeout(moveCards(), 10)
-				
-				}, 10)
-			} else {
-				return
-			}
-		})
-
-		var video = document.getElementById('last_video')
-		var progress = document.querySelectorAll('.progress__inner')
-		var play = document.getElementById('play_button')
-
-		video.addEventListener('timeupdate', function(){
-			progress[0].style.width = video.currentTime / (video.duration / 100) + '%'
-		})
-		
-		play.addEventListener('click', function(){
-			
-			if(video.paused) {
-				video.play()
-			} else {
-				video.pause()
-			}
-		})
-
-		var mobile_nav = document.querySelectorAll('.mobile-nav')
-		var body = document.querySelectorAll('body')
-
-		document.addEventListener('click', function(e){
-
-			if (e.target.id == 'menu_toggler') {
-				
-				mobile_nav[0].classList.toggle('hidden')
-				setTimeout(function() {
-					mobile_nav[0].classList.toggle('mobile-nav__show')
-				}, 10)
-			} else if (e.target.id == 'close_icon') {
-				
-				mobile_nav[0].classList.toggle('mobile-nav__show')
-				setTimeout(function() {
-					mobile_nav[0].classList.toggle('hidden')
-				}, 1000)
-			} else {
-				
-				return
-			}
-
-		})
-
-	</script>
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
